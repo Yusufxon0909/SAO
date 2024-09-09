@@ -1,4 +1,4 @@
-import 'package:asuna/screens/main_page.dart';
+import 'package:asuna/screens/main%20page/main_page.dart';
 import 'package:flutter/material.dart';
 
 class TheBottomNavigationBar extends StatefulWidget {
