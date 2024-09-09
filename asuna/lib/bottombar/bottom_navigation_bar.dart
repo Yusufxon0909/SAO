@@ -1,4 +1,8 @@
 import 'package:asuna/screens/main%20page/main_page.dart';
+import 'package:asuna/screens/payment%20page/payment_page.dart';
+import 'package:asuna/screens/reports%20page/reports_page.dart';
+import 'package:asuna/screens/services%20page/services_page.dart';
+import 'package:asuna/screens/transfers%20page/transfers_page.dart';
 import 'package:flutter/material.dart';
 
 class TheBottomNavigationBar extends StatefulWidget {
@@ -13,18 +17,10 @@ class TheBottomNavigationBarState extends State<TheBottomNavigationBar> {
 
   final List<Widget> _pages = [
     const MainPage(),
-    const Center(
-      child: Text('a'),
-    ),
-    const Center(
-      child: Text('b'),
-    ),
-    const Center(
-      child: Text('c'),
-    ),
-    const Center(
-      child: Text('d'),
-    ),
+    const PaymentPage(),
+    const TransfersPage(),
+    const ReportsPage(),
+    const ServicesPage(),
   ];
 
   void _onItemTapped(int index) {
