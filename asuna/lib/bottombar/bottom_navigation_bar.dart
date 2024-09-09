@@ -1,3 +1,4 @@
+import 'package:asuna/screens/four.dart';
 import 'package:asuna/screens/main_page.dart';
 import 'package:flutter/material.dart';
 
@@ -19,9 +20,7 @@ class TheBottomNavigationBarState extends State<TheBottomNavigationBar> {
     const Center(
       child: Text('b'),
     ),
-    const Center(
-      child: Text('c'),
-    ),
+    const four(),
     const Center(
       child: Text('d'),
     ),
