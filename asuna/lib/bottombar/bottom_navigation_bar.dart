@@ -32,9 +32,6 @@ class TheBottomNavigationBarState extends State<TheBottomNavigationBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Modular Bottom Navigation Bar'),
-      ),
       body: _pages[_selectedIndex], // Displays the selected page
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[

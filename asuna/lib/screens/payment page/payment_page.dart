@@ -73,8 +73,8 @@ class _ThirdState extends State<PaymentPage> {
       backgroundColor: Colors.black87,
       body: SingleChildScrollView(
         child: Column(children: [
-          Padding(
-            padding: const EdgeInsets.all(15),
+          const Padding(
+            padding: EdgeInsets.all(15),
             child: Text(
               "To'lov",
               style: TextStyle(
@@ -87,16 +87,16 @@ class _ThirdState extends State<PaymentPage> {
             padding: const EdgeInsets.only(left: 30, right: 30, top: 10),
             child: Container(
               decoration: BoxDecoration(
-                color: Color(
+                color: const Color(
                     0xFF2C2C2E), // Dark background color for the search bar
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Row(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
+                  const Padding(
+                    padding: EdgeInsets.all(8.0),
                     child: Padding(
-                      padding: const EdgeInsets.only(left: 20),
+                      padding: EdgeInsets.only(left: 20),
                       child: Icon(
                         Icons.search,
                         color: Color(0xFFA0A0A0),
@@ -104,12 +104,12 @@ class _ThirdState extends State<PaymentPage> {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
-                  Expanded(
+                  const Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.all(4.0),
+                      padding: EdgeInsets.all(4.0),
                       child: TextField(
                         decoration: InputDecoration(
                           hintText: 'Qidiruv', // Search hint text
@@ -130,9 +130,9 @@ class _ThirdState extends State<PaymentPage> {
                             context,
                             MaterialPageRoute(
                                 builder: (context) =>
-                                    TheBottomNavigationBar()));
+                                    const TheBottomNavigationBar()));
                       },
-                      child: Icon(
+                      child: const Icon(
                         Icons.qr_code_scanner_outlined, // QR code icon
                         color: Color(0xFF007AFF),
                         size: 35, // Color for the QR code icon
@@ -153,16 +153,17 @@ class _ThirdState extends State<PaymentPage> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => TheBottomNavigationBar()));
+                            builder: (context) =>
+                                const TheBottomNavigationBar()));
                   },
                   child: Container(
                     height: 140,
                     width: 140,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        color: Color.fromARGB(221, 57, 57, 57)),
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 10, top: 20),
+                        color: const Color.fromARGB(221, 57, 57, 57)),
+                    child: const Padding(
+                      padding: EdgeInsets.only(left: 10, top: 20),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -191,16 +192,17 @@ class _ThirdState extends State<PaymentPage> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => TheBottomNavigationBar()));
+                            builder: (context) =>
+                                const TheBottomNavigationBar()));
                   },
                   child: Container(
                     height: 140,
                     width: 140,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        color: Color.fromARGB(221, 57, 57, 57)),
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 10, top: 20),
+                        color: const Color.fromARGB(221, 57, 57, 57)),
+                    child: const Padding(
+                      padding: EdgeInsets.only(left: 10, top: 20),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -229,16 +231,17 @@ class _ThirdState extends State<PaymentPage> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => TheBottomNavigationBar()));
+                            builder: (context) =>
+                                const TheBottomNavigationBar()));
                   },
                   child: Container(
                     height: 140,
                     width: 140,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        color: Color.fromARGB(221, 57, 57, 57)),
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 10, top: 20),
+                        color: const Color.fromARGB(221, 57, 57, 57)),
+                    child: const Padding(
+                      padding: EdgeInsets.only(left: 10, top: 20),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -310,17 +313,17 @@ Widget rock(ism2, BuildContext context) {
           Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (context) => TheBottomNavigationBar()));
+                  builder: (context) => const TheBottomNavigationBar()));
         },
         child: Container(
           height: 80,
           width: 430,
-          color: Color.fromARGB(221, 57, 57, 57),
+          color: const Color.fromARGB(221, 57, 57, 57),
           child: Padding(
             padding: const EdgeInsets.only(top: 25, left: 18),
             child: Text(
               ism2.name,
-              style: TextStyle(
+              style: const TextStyle(
                   color: Colors.white,
                   fontSize: 20,
                   fontWeight: FontWeight.w500),
