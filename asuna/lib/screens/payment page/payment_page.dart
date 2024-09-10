@@ -1,7 +1,6 @@
-import 'package:asuna/bottombar/bottom_navigation_bar.dart';
+import 'package:flutter/material.dart';
 import 'package:asuna/screens/payment%20page/clas/davlatxizmatlari.dart';
 import 'package:asuna/screens/payment%20page/clas/mobile.dart';
-import 'package:flutter/material.dart';
 
 class PaymentPage extends StatefulWidget {
   const PaymentPage({super.key});
@@ -57,7 +56,7 @@ class _PaymentPageState extends State<PaymentPage> {
       case 17:
         return "Internat-to'plamlari";
       default:
-        return "Unknown"; // Add a default case to handle any other index
+        return "Unknown";
     }
   }
 
@@ -71,7 +70,7 @@ class _PaymentPageState extends State<PaymentPage> {
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => case1()));
         break;
-
+      // Add cases for other pages as needed
       default:
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text('Page not implemented yet')),
@@ -86,11 +85,193 @@ class _PaymentPageState extends State<PaymentPage> {
       body: SingleChildScrollView(
         child: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: List.generate(
-              name.length,
-              (index) => rock(name[index], context, index),
-            ),
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(15),
+                child: Text(
+                  "To'lov",
+                  style: TextStyle(
+                      fontSize: 25,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 30, right: 30, top: 10),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Color(0xFF2C2C2E),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Icon(
+                          Icons.search,
+                          color: Color(0xFFA0A0A0),
+                          size: 30,
+                        ),
+                      ),
+                      SizedBox(width: 10),
+                      Expanded(
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: 'Qidiruv',
+                            hintStyle: TextStyle(
+                                color: Color(0xFFA0A0A0), fontSize: 20),
+                            border: InputBorder.none,
+                          ),
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ),
+                      Padding(
+                        padding:
+                            const EdgeInsets.only(right: 15, top: 8, bottom: 8),
+                        child: InkWell(
+                          onTap: () {
+                            // Add QR code scanning functionality here
+                          },
+                          child: Icon(
+                            Icons.qr_code_scanner_outlined,
+                            color: Color(0xFF007AFF),
+                            size: 35,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 30, left: 10, right: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Expanded(
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => case0()));
+                        },
+                        child: Container(
+                          height: 140,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Color.fromARGB(221, 57, 57, 57)),
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 10, top: 20),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Icon(
+                                  Icons.star_border,
+                                  size: 35,
+                                  color: Colors.blue,
+                                ),
+                                SizedBox(height: 20),
+                                Text(
+                                  "Sraralangan to'lovlar",
+                                  style: TextStyle(
+                                      fontSize: 17,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w500),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 10),
+                    Expanded(
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      case0())); // Change this to appropriate page
+                        },
+                        child: Container(
+                          height: 140,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Color.fromARGB(221, 57, 57, 57)),
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 10, top: 20),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Icon(
+                                  Icons.calendar_month_outlined,
+                                  size: 35,
+                                  color: Colors.blue,
+                                ),
+                                SizedBox(height: 30),
+                                Text(
+                                  "Avtoto'lovlar",
+                                  style: TextStyle(
+                                      fontSize: 17,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w500),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 10),
+                    Expanded(
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      case0())); // Change this to appropriate page
+                        },
+                        child: Container(
+                          height: 140,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              color: Color.fromARGB(221, 57, 57, 57)),
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 10, top: 20),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Icon(
+                                  Icons.add_location_alt_outlined,
+                                  size: 35,
+                                  color: Colors.blue,
+                                ),
+                                SizedBox(height: 30),
+                                Text(
+                                  "Joylarda to'lova",
+                                  style: TextStyle(
+                                      fontSize: 17,
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(height: 50),
+              Column(
+                children: List.generate(
+                  name.length,
+                  (index) => rock(name[index], context, index),
+                ),
+              ),
+            ],
           ),
         ),
       ),
@@ -106,7 +287,7 @@ class _PaymentPageState extends State<PaymentPage> {
           onTap: () => _navigateToPage(index, context),
           child: Container(
             height: 80,
-            width: 430,
+            width: double.infinity, // Use double.infinity to expand the width
             color: Color.fromARGB(221, 57, 57, 57),
             child: Padding(
               padding: const EdgeInsets.only(top: 25, left: 18),
