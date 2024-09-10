@@ -1,4 +1,6 @@
 import 'package:asuna/bottombar/bottom_navigation_bar.dart';
+import 'package:asuna/screens/payment%20page/clas/davlatxizmatlari.dart';
+import 'package:asuna/screens/payment%20page/clas/mobile.dart';
 import 'package:flutter/material.dart';
 
 class PaymentPage extends StatefulWidget {
@@ -12,11 +14,11 @@ class _PaymentPageState extends State<PaymentPage> {
   List<Simple> name = List.generate(
     18,
     (index) => Simple(
-      name: getNameByIndex(index),
+      name: nameindex(index),
     ),
   );
 
-  static String getNameByIndex(int index) {
+  static String nameindex(int index) {
     switch (index) {
       case 0:
         return "Mobile operatorlar";
@@ -55,7 +57,25 @@ class _PaymentPageState extends State<PaymentPage> {
       case 17:
         return "Internat-to'plamlari";
       default:
-        return "";
+        return "Unknown"; // Add a default case to handle any other index
+    }
+  }
+
+  void _navigateToPage(int index, BuildContext context) {
+    switch (index) {
+      case 0:
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => case0()));
+        break;
+      case 1:
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => case1()));
+        break;
+
+      default:
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Page not implemented yet')),
+        );
     }
   }
 
@@ -69,7 +89,35 @@ class _PaymentPageState extends State<PaymentPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: List.generate(
               name.length,
-              (index) => rock(name[index], context),
+              (index) => rock(name[index], context, index),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget rock(Simple ism2, BuildContext context, int index) {
+    return Padding(
+      padding: const EdgeInsets.all(5.0),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(20),
+        child: InkWell(
+          onTap: () => _navigateToPage(index, context),
+          child: Container(
+            height: 80,
+            width: 430,
+            color: Color.fromARGB(221, 57, 57, 57),
+            child: Padding(
+              padding: const EdgeInsets.only(top: 25, left: 18),
+              child: Text(
+                ism2.name ?? '',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
             ),
           ),
         ),
@@ -88,6 +136,7 @@ class Simple {
   String? top;
   String? up;
   String? down;
+
   Simple({
     this.simble,
     this.ism,
@@ -99,36 +148,4 @@ class Simple {
     this.up,
     this.down,
   });
-}
-
-Widget rock(Simple ism2, BuildContext context) {
-  return Padding(
-    padding: const EdgeInsets.all(5.0),
-    child: ClipRRect(
-      borderRadius: BorderRadius.circular(20),
-      child: InkWell(
-        onTap: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => TheBottomNavigationBar()));
-        },
-        child: Container(
-          height: 80,
-          width: 430,
-          color: Color.fromARGB(221, 57, 57, 57),
-          child: Padding(
-            padding: const EdgeInsets.only(top: 25, left: 18),
-            child: Text(
-              ism2.name ?? '',
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.w500),
-            ),
-          ),
-        ),
-      ),
-    ),
-  );
 }
