@@ -1,72 +1,64 @@
-// import 'package:dars_1/animation%20and%20lotie.dart';
 import 'package:asuna/bottombar/bottom_navigation_bar.dart';
-
 import 'package:flutter/material.dart';
 
 class PaymentPage extends StatefulWidget {
   const PaymentPage({super.key});
 
   @override
-  State<PaymentPage> createState() => _ThirdState();
+  State<PaymentPage> createState() => _PaymentPageState();
 }
 
-class _ThirdState extends State<PaymentPage> {
-  List name = [
-    simple(
-      name: "Mobile operatorlar",
+class _PaymentPageState extends State<PaymentPage> {
+  List<Simple> name = List.generate(
+    18,
+    (index) => Simple(
+      name: getNameByIndex(index),
     ),
-    simple(
-      name: "Davlat hizmatlari va DYHXX(GAI)",
-    ),
-    simple(
-      name: "Komunal to'lovlar",
-    ),
-    simple(
-      name: "Kredit so'ndirish",
-    ),
-    simple(
-      name: "Internat-provayderlar",
-    ),
-    simple(
-      name: "Soliqlar",
-    ),
-    simple(
-      name: "Internat-xizmatlar",
-    ),
-    simple(
-      name: "Televidenia",
-    ),
-    simple(
-      name: "Xosting va domenlar",
-    ),
-    simple(
-      name: "Ko'ngil ochar va dam olish",
-    ),
-    simple(
-      name: "Sug'urta",
-    ),
-    simple(
-      name: "Xayriya",
-    ),
-    simple(
-      name: "Ta'lim",
-    ),
-    simple(
-      name: "Sog'liq",
-    ),
-    simple(
-      name: "Transport va avtoturargoh",
-    ),
-    simple(
-      name: "Taksi",
-    ),
-    simple(
-      name: "Hisob raqamiga to'lov",
-    ),
-    simple(
-      name: "Internat-to'plamlari",
-    ),
-  ];
+  );
+
+  static String getNameByIndex(int index) {
+    switch (index) {
+      case 0:
+        return "Mobile operatorlar";
+      case 1:
+        return "Davlat hizmatlari va DYHXX(GAI)";
+      case 2:
+        return "Komunal to'lovlar";
+      case 3:
+        return "Kredit so'ndirish";
+      case 4:
+        return "Internat-provayderlar";
+      case 5:
+        return "Soliqlar";
+      case 6:
+        return "Internat-xizmatlar";
+      case 7:
+        return "Televidenia";
+      case 8:
+        return "Xosting va domenlar";
+      case 9:
+        return "Ko'ngil ochar va dam olish";
+      case 10:
+        return "Sug'urta";
+      case 11:
+        return "Xayriya";
+      case 12:
+        return "Ta'lim";
+      case 13:
+        return "Sog'liq";
+      case 14:
+        return "Transport va avtoturargoh";
+      case 15:
+        return "Taksi";
+      case 16:
+        return "Hisob raqamiga to'lov";
+      case 17:
+        return "Internat-to'plamlari";
+      default:
+        return "";
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -87,8 +79,7 @@ class _ThirdState extends State<PaymentPage> {
             padding: const EdgeInsets.only(left: 30, right: 30, top: 10),
             child: Container(
               decoration: BoxDecoration(
-                color: const Color(
-                    0xFF2C2C2E), // Dark background color for the search bar
+                color: const Color(0xFF2C2C2E), // Dark background color for the search bar
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Row(
@@ -113,8 +104,7 @@ class _ThirdState extends State<PaymentPage> {
                       child: TextField(
                         decoration: InputDecoration(
                           hintText: 'Qidiruv', // Search hint text
-                          hintStyle:
-                              TextStyle(color: Color(0xFFA0A0A0), fontSize: 20),
+                          hintStyle: TextStyle(color: Color(0xFFA0A0A0), fontSize: 20),
                           border: InputBorder.none,
                         ),
                         style: TextStyle(color: Colors.white), // Text color
@@ -122,8 +112,7 @@ class _ThirdState extends State<PaymentPage> {
                     ),
                   ),
                   Padding(
-                    padding:
-                        const EdgeInsets.only(right: 15, top: 8, bottom: 8),
+                    padding: const EdgeInsets.only(right: 15, top: 8, bottom: 8),
                     child: InkWell(
                       onTap: () {
                         Navigator.push(
@@ -280,8 +269,7 @@ class _ThirdState extends State<PaymentPage> {
   }
 }
 
-// ignore: camel_case_types
-class simple {
+class Simple {
   IconData? simble;
   String? ism;
   String? info;
@@ -291,7 +279,7 @@ class simple {
   String? top;
   String? up;
   String? down;
-  simple({
+  Simple({
     this.simble,
     this.ism,
     this.info,
@@ -304,7 +292,7 @@ class simple {
   });
 }
 
-Widget rock(ism2, BuildContext context) {
+Widget rock(Simple ism2, BuildContext context) {
   return Padding(
     padding: const EdgeInsets.all(5.0),
     child: ClipRRect(
@@ -323,7 +311,7 @@ Widget rock(ism2, BuildContext context) {
           child: Padding(
             padding: const EdgeInsets.only(top: 25, left: 18),
             child: Text(
-              ism2.name,
+              ism2.name ?? '',
               style: const TextStyle(
                   color: Colors.white,
                   fontSize: 20,
