@@ -280,6 +280,7 @@ class _ThirdState extends State<PaymentPage> {
   }
 }
 
+// ignore: camel_case_types
 class simple {
   IconData? simble;
   String? ism;

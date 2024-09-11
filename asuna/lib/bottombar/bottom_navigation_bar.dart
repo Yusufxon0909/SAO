@@ -40,12 +40,12 @@ class TheBottomNavigationBarState extends State<TheBottomNavigationBar> {
           border: Border(
             top: BorderSide(
               color: Colors.grey,
-              width: 0.4,
+              width: 0.2,
             ),
           ),
         ),
         child: BottomNavigationBar(
-          backgroundColor: const Color(0xFF1A1A1A),
+          backgroundColor: const Color(0xFF242424),
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Icon(CupertinoIcons.home),
