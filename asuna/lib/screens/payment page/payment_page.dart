@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:asuna/screens/payment%20page/clas/davlatxizmatlari.dart';
+//import 'package:asuna/screens/payment%20page/clas/davlatxizmatlari.dart';
 import 'package:asuna/screens/payment%20page/clas/mobile.dart';
 
 class PaymentPage extends StatefulWidget {
