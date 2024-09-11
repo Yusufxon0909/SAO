@@ -507,7 +507,12 @@ class _PaymentPageState extends State<PaymentPage> {
   }
 }
 
+<<<<<<< HEAD
 class Simple {
+=======
+// ignore: camel_case_types
+class simple {
+>>>>>>> origin/home_page_branch
   IconData? simble;
   String? ism;
   String? info;
