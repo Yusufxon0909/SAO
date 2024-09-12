@@ -9,7 +9,7 @@ class XizmatlarMenu extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15),
+          padding: const EdgeInsets.fromLTRB(15, 0, 15, 5),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -46,7 +46,7 @@ class XizmatlarMenu extends StatelessWidget {
         LayoutBuilder(
           builder: (context, constraints) {
             final double itemWidth = constraints.maxWidth / 4;
-            final double itemHeight = itemWidth * 1.2;
+            final double itemHeight = itemWidth * 1.1;
             return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15),
               child: GridView.builder(
