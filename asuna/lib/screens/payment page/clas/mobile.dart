@@ -14,14 +14,17 @@ class _case0State extends State<case0> {
       appBar: AppBar(
         backgroundColor: Colors.amber,
       ),
-      body: Column(
-        children: [
-          Container(
-            height: 200,
-            width: 300,
-            color: Colors.red,
-          )
-        ],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              Icons.money_sharp,
+              color: Colors.black,
+              size: 500,
+            )
+          ],
+        ),
       ),
     );
   }

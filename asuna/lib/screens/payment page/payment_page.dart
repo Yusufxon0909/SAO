@@ -70,7 +70,7 @@ class _PaymentPageState extends State<PaymentPage> {
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => case1()));
         break;
-      // Add cases for other pages as needed
+
       default:
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text('Page not implemented yet')),
@@ -129,9 +129,7 @@ class _PaymentPageState extends State<PaymentPage> {
                         padding:
                             const EdgeInsets.only(right: 15, top: 8, bottom: 8),
                         child: InkWell(
-                          onTap: () {
-                            // Add QR code scanning functionality here
-                          },
+                          onTap: () {},
                           child: Icon(
                             Icons.qr_code_scanner_outlined,
                             color: Color(0xFF007AFF),
@@ -287,7 +285,7 @@ class _PaymentPageState extends State<PaymentPage> {
           onTap: () => _navigateToPage(index, context),
           child: Container(
             height: 80,
-            width: double.infinity, // Use double.infinity to expand the width
+            width: double.infinity,
             color: Color.fromARGB(221, 57, 57, 57),
             child: Padding(
               padding: const EdgeInsets.only(top: 25, left: 18),
