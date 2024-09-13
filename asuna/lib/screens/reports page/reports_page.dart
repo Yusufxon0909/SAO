@@ -98,6 +98,7 @@ class _ReportsPageState extends State<ReportsPage> {
           borderRadius: BorderRadius.circular(8),
         ),
         child: Row(
+
           children: [
             Expanded(
               child: _buildSegmentButton('Report on Click'),
@@ -145,24 +146,29 @@ class _ReportsPageState extends State<ReportsPage> {
         itemCount: _months.length,
         itemBuilder: (context, index) {
           bool isSelected = _selectedMonth == _months[index];
-          return Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
-            child: GestureDetector(
-              onTap: () {
-                setState(() {
-                  _selectedMonth = _months[index];
-                  // Here you would typically fetch operations for the selected month
-                  // and update _hasOperations accordingly
-                });
-              },
-              child: Text(
-                _months[index],
-                style: TextStyle(
-                  color: isSelected ? Colors.blue : Colors.grey,
-                  fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+          return Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                child: GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      _selectedMonth = _months[index];
+                      // Here you would typically fetch operations for the selected month
+                      // and update _hasOperations accordingly
+                    });
+                  },
+                  child: Text(
+                    _months[index],
+                    style: TextStyle(
+                      color: isSelected ? Colors.blue : Colors.grey,
+                      fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+                    ),
+                  ),
                 ),
               ),
-            ),
+            ],
           );
         },
       ),
