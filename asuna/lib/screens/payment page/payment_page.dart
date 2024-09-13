@@ -1,3 +1,4 @@
+import 'package:asuna/screens/payment%20page/clas/davlatxizmatlari.dart';
 import 'package:flutter/material.dart';
 //import 'package:asuna/screens/payment%20page/clas/davlatxizmatlari.dart';
 import 'package:asuna/screens/payment%20page/clas/mobile.dart';
@@ -70,17 +71,11 @@ class _PaymentPageState extends State<PaymentPage> {
     switch (index) {
       case 0:
         Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) =>
-                    const MobilePage())); // case0() to MobilePage
+            context, MaterialPageRoute(builder: (context) => const Case0()));
         break;
       case 1:
         Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) =>
-                    const DavlatXizmatlariPage())); // case1() to DavlatXizmatlariPage
+            context, MaterialPageRoute(builder: (context) => const Case1()));
         break;
       // Add cases for other pages as needed
       default:
@@ -166,7 +161,7 @@ class _PaymentPageState extends State<PaymentPage> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const MobilePage()));
+                                  builder: (context) => const Case0()));
                         },
                         child: Container(
                           height: 140,
@@ -205,7 +200,7 @@ class _PaymentPageState extends State<PaymentPage> {
                               context,
                               MaterialPageRoute(
                                   builder: (context) =>
-                                      const MobilePage())); // Change this to appropriate page
+                                      const Case0())); // Change this to appropriate page
                         },
                         child: Container(
                           height: 140,
@@ -244,7 +239,7 @@ class _PaymentPageState extends State<PaymentPage> {
                               context,
                               MaterialPageRoute(
                                   builder: (context) =>
-                                      const case0())); // Change this to appropriate page
+                                      const Case0())); // Change this to appropriate page
                         },
                         child: Container(
                           height: 140,

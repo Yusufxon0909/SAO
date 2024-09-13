@@ -20,6 +20,8 @@ class _MainPageState extends State<MainPage> {
     // final width = MediaQuery.of(context).size.width;
     // final height = MediaQuery.of(context).size.height;
 
+    // final width = MediaQuery.of(context).size.width;
+
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(

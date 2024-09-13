@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 
-class case0 extends StatefulWidget {
-  const case0({super.key});
+class Case0 extends StatefulWidget {
+  const Case0({super.key});
 
   @override
-  State<case0> createState() => _case0State();
+  State<Case0> createState() => _Case0State();
 }
 
-class _case0State extends State<case0> {
+class _Case0State extends State<Case0> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.amber,
       ),
-      body: Center(
+      body: const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
