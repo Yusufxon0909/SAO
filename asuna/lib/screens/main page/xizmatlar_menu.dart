@@ -9,7 +9,7 @@ class XizmatlarMenu extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.fromLTRB(15, 0, 15, 5),
+          padding: const EdgeInsets.fromLTRB(15, 0, 17, 5),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [

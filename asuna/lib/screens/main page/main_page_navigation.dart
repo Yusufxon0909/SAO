@@ -49,7 +49,7 @@ class MainPageNavigation {
       id: 'kinoteatrga_chiptalar',
       icon: Icons.movie,
       label: 'Kinoteatrga chiptalar',
-      color: const Color(0xFFFF4FE5),
+      color: const Color(0xFF4FFF9F),
       screen: const KinoteatrgaChiptalar(),
     ),
     MenuItem(
