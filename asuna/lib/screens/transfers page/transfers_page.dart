@@ -32,13 +32,19 @@ class _TransfersPageState extends State<TransfersPage> {
         backgroundColor: Colors.black,
         body: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
-            const Text("O'tkazmalar",style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.w600),),
+            const Text(
+              "O'tkazmalar",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 15,
+                  fontWeight: FontWeight.w600),
+            ),
             Padding(
               padding: const EdgeInsets.all(15),
-              child: Container(
+              child: SizedBox(
                 height:
                     40, // Bu yerda balandlikni o'zingiz xohlagan o'lchamga o'zgartiring
                 child: TextField(
@@ -47,20 +53,21 @@ class _TransfersPageState extends State<TransfersPage> {
                   obscureText: false,
                   style: const TextStyle(color: Colors.white),
                   decoration: InputDecoration(
-                    contentPadding: EdgeInsets.symmetric(
+                    contentPadding: const EdgeInsets.symmetric(
                         vertical: 10, horizontal: 12), // Ichki qismini moslash
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide: BorderSide(color: Color(0xFF363740)),
+                      borderSide: const BorderSide(color: Color(0xFF363740)),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide:
-                          const BorderSide(color: Color(0xFF1675F2), width: 2.0),
+                      borderSide: const BorderSide(
+                          color: Color(0xFF1675F2), width: 2.0),
                     ),
                     hintText: "Karta, hamyon, telefon raqamni kiriting",
-                    hintStyle: const TextStyle(color: Colors.white54,fontSize: 12),
-                    fillColor: Color(0xFF363740),
+                    hintStyle:
+                        const TextStyle(color: Colors.white54, fontSize: 12),
+                    fillColor: const Color(0xFF363740),
                     filled: true,
                     suffixIcon: IconButton(
                       icon: const Icon(Icons.qr_code_scanner,
@@ -74,11 +81,12 @@ class _TransfersPageState extends State<TransfersPage> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 15,right: 15),
+              padding: const EdgeInsets.only(left: 15, right: 15),
               child: SizedBox(
                 height: 100, // ListView uchun balandlik
                 child: ListView.builder(
-                  scrollDirection: Axis.horizontal, // ListView gorizontal bo'ladi
+                  scrollDirection:
+                      Axis.horizontal, // ListView gorizontal bo'ladi
                   itemCount: xizmatlar.length,
                   itemBuilder: (context, index) {
                     return Padding(
@@ -90,7 +98,7 @@ class _TransfersPageState extends State<TransfersPage> {
                           image: DecorationImage(
                               image: AssetImage(xizmatlar[index].nom),
                               fit: BoxFit.cover),
-                          borderRadius: 
+                          borderRadius:
                               BorderRadius.circular(10), // Border radius 10
                         ),
                         // child: Column(
@@ -107,19 +115,25 @@ class _TransfersPageState extends State<TransfersPage> {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(15),
+            const Padding(
+              padding: EdgeInsets.all(15),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text("Oxirgi o'tkazmalar",style: TextStyle(color: Colors.white54,fontSize: 13,fontWeight: FontWeight.w600),),
+                  Text(
+                    "Oxirgi o'tkazmalar",
+                    style: TextStyle(
+                        color: Colors.white54,
+                        fontSize: 13,
+                        fontWeight: FontWeight.w600),
+                  ),
                 ],
-              ),  
+              ),
             )
           ],
         ),
       ),
-    );  
+    );
   }
 }
 

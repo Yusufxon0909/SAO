@@ -16,6 +16,7 @@ migration:
       create_revision: 2663184aa79047d0a33a14a3b607954f8fdd8730
       base_revision: 2663184aa79047d0a33a14a3b607954f8fdd8730
     - platform: android
+<<<<<<< HEAD
       create_revision: 2663184aa79047d0a33a14a3b607954f8fdd8730
       base_revision: 2663184aa79047d0a33a14a3b607954f8fdd8730
     - platform: ios
@@ -33,6 +34,10 @@ migration:
     - platform: windows
       create_revision: 2663184aa79047d0a33a14a3b607954f8fdd8730
       base_revision: 2663184aa79047d0a33a14a3b607954f8fdd8730
+=======
+      create_revision: 4cf269e36de2573851eaef3c763994f8f9be494d
+      base_revision: 4cf269e36de2573851eaef3c763994f8f9be494d
+>>>>>>> home_page_branch
 
   # User provided section
 

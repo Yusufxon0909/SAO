@@ -70,16 +70,21 @@ class _PaymentPageState extends State<PaymentPage> {
     switch (index) {
       case 0:
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => MobilePage())); // case0() to MobilePage
+            context,
+            MaterialPageRoute(
+                builder: (context) => MobilePage())); // case0() to MobilePage
         break;
       case 1:
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => DavlatXizmatlariPage())); // case1() to DavlatXizmatlariPage
+            context,
+            MaterialPageRoute(
+                builder: (context) =>
+                    DavlatXizmatlariPage())); // case1() to DavlatXizmatlariPage
         break;
       // Add cases for other pages as needed
       default:
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Page not implemented yet')),
+          const SnackBar(content: Text('Page not implemented yet')),
         );
     }
   }
@@ -92,8 +97,8 @@ class _PaymentPageState extends State<PaymentPage> {
         child: Center(
           child: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.all(15),
+              const Padding(
+                padding: EdgeInsets.all(15),
                 child: Text(
                   "To'lov",
                   style: TextStyle(
@@ -106,21 +111,21 @@ class _PaymentPageState extends State<PaymentPage> {
                 padding: const EdgeInsets.only(left: 30, right: 30, top: 10),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Color(0xFF2C2C2E),
+                    color: const Color(0xFF2C2C2E),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Row(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
                         child: Icon(
                           Icons.search,
                           color: Color(0xFFA0A0A0),
                           size: 30,
                         ),
                       ),
-                      SizedBox(width: 10),
-                      Expanded(
+                      const SizedBox(width: 10),
+                      const Expanded(
                         child: TextField(
                           decoration: InputDecoration(
                             hintText: 'Qidiruv',
@@ -138,7 +143,7 @@ class _PaymentPageState extends State<PaymentPage> {
                           onTap: () {
                             // Add QR code scanning functionality here
                           },
-                          child: Icon(
+                          child: const Icon(
                             Icons.qr_code_scanner_outlined,
                             color: Color(0xFF007AFF),
                             size: 35,
@@ -157,16 +162,18 @@ class _PaymentPageState extends State<PaymentPage> {
                     Expanded(
                       child: InkWell(
                         onTap: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => MobilePage()));
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => MobilePage()));
                         },
                         child: Container(
                           height: 140,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
-                              color: Color.fromARGB(221, 57, 57, 57)),
-                          child: Padding(
-                            padding: const EdgeInsets.only(left: 10, top: 20),
+                              color: const Color.fromARGB(221, 57, 57, 57)),
+                          child: const Padding(
+                            padding: EdgeInsets.only(left: 10, top: 20),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -189,22 +196,23 @@ class _PaymentPageState extends State<PaymentPage> {
                         ),
                       ),
                     ),
-                    SizedBox(width: 10),
+                    const SizedBox(width: 10),
                     Expanded(
                       child: InkWell(
                         onTap: () {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => MobilePage())); // Change this to appropriate page
+                                  builder: (context) =>
+                                      MobilePage())); // Change this to appropriate page
                         },
                         child: Container(
                           height: 140,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
-                              color: Color.fromARGB(221, 57, 57, 57)),
-                          child: Padding(
-                            padding: const EdgeInsets.only(left: 10, top: 20),
+                              color: const Color.fromARGB(221, 57, 57, 57)),
+                          child: const Padding(
+                            padding: EdgeInsets.only(left: 10, top: 20),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -227,7 +235,7 @@ class _PaymentPageState extends State<PaymentPage> {
                         ),
                       ),
                     ),
-                    SizedBox(width: 10),
+                    const SizedBox(width: 10),
                     Expanded(
                       child: InkWell(
                         onTap: () {
@@ -235,15 +243,15 @@ class _PaymentPageState extends State<PaymentPage> {
                               context,
                               MaterialPageRoute(
                                   builder: (context) =>
-                                      case0())); // Change this to appropriate page
+                                      const Case0())); // Change this to appropriate page
                         },
                         child: Container(
                           height: 140,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
-                              color: Color.fromARGB(221, 57, 57, 57)),
-                          child: Padding(
-                            padding: const EdgeInsets.only(left: 10, top: 20),
+                              color: const Color.fromARGB(221, 57, 57, 57)),
+                          child: const Padding(
+                            padding: EdgeInsets.only(left: 10, top: 20),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -269,7 +277,7 @@ class _PaymentPageState extends State<PaymentPage> {
                   ],
                 ),
               ),
-              SizedBox(height: 50),
+              const SizedBox(height: 50),
               Column(
                 children: List.generate(
                   name.length,
@@ -293,12 +301,12 @@ class _PaymentPageState extends State<PaymentPage> {
           child: Container(
             height: 80,
             width: double.infinity,
-            color: Color.fromARGB(221, 57, 57, 57),
+            color: const Color.fromARGB(221, 57, 57, 57),
             child: Padding(
               padding: const EdgeInsets.only(top: 25, left: 18),
               child: Text(
                 ism2.name ?? '',
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.white,
                   fontSize: 20,
                   fontWeight: FontWeight.w500,
@@ -337,21 +345,25 @@ class Simple {
 }
 
 class MobilePage extends StatelessWidget {
+  const MobilePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Mobile Page')),
-      body: Center(child: Text('Mobile Page Content')),
+      appBar: AppBar(title: const Text('Mobile Page')),
+      body: const Center(child: Text('Mobile Page Content')),
     );
   }
 }
 
 class DavlatXizmatlariPage extends StatelessWidget {
+  const DavlatXizmatlariPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Davlat Xizmatlari Page')),
-      body: Center(child: Text('Davlat Xizmatlari Page Content')),
+      appBar: AppBar(title: const Text('Davlat Xizmatlari Page')),
+      body: const Center(child: Text('Davlat Xizmatlari Page Content')),
     );
   }
 }
