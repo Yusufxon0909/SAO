@@ -47,3 +47,5 @@
 	<true/>
 </dict>
 </plist>
+<key>NSContactsUsageDescription</key>
+<string>Telefon kontaktlaringizga kirish uchun ruxsat so'ramoqdamiz</string>

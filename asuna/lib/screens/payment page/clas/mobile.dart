@@ -14,7 +14,7 @@ class _Case0State extends State<Case0> {
       appBar: AppBar(
         backgroundColor: Colors.amber,
       ),
-      body: Center(
+      body: const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

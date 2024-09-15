@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 // import 'package:permission_handler/permission_handler.dart';
-
+  String kontak = "";
+  String raqam = "";
 class TransfersPage extends StatefulWidget {
   const TransfersPage({super.key});
 
@@ -23,7 +24,12 @@ class _TransfersPageState extends State<TransfersPage> {
       nom: "rasm/clic.jpg",
     ),
   ];
-
+List contakt =[
+Kontak(
+  nom: kontak,
+  nomer: raqam,
+)
+];
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -120,16 +126,30 @@ class _TransfersPageState extends State<TransfersPage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text(
-                    "Oxirgi o'tkazmalar",
-                    style: TextStyle(
-                        color: Colors.white54,
-                        fontSize: 13,
-                        fontWeight: FontWeight.w600),
+                  Column(
+                    children: [
+                      Text(
+                        "Oxirgi o'tkazmalar",
+                        style: TextStyle(
+                            color: Colors.white54,
+                            fontSize: 13,
+                            fontWeight: FontWeight.w600),
+                      ),
+                      Text(
+                        "Telefon kontaklari",
+                        style: TextStyle(
+                            color: Colors.white54,
+                            fontSize: 13,
+                            fontWeight: FontWeight.w600),
+                      ),
+                    ],
                   ),
                 ],
               ),
-            )
+            ),
+           Column(
+            children:contakt.map((tel)=>dizayn(tel)).toList(),
+           )
           ],
         ),
       ),
@@ -141,5 +161,51 @@ class Xizmat {
   String? nom;
   Xizmat({
     this.nom,
+  });
+}
+
+Widget dizayn(tel) {
+  return Padding(
+    padding: const EdgeInsets.only(left: 15, right: 15, bottom: 10),
+    child: Container(
+      width: double.infinity,
+      height: 60,
+      decoration: BoxDecoration(
+          color: const Color(0xFF363740),
+          borderRadius: BorderRadius.circular(10)),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Row(
+          children: [
+            CircleAvatar(
+              radius: 23,
+              backgroundColor: Colors.black,
+            ),
+            SizedBox(
+              width: 15,
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(kontak, style: TextStyle(color: Colors.grey[300])),
+                Text(
+                  raqam,
+                  style: TextStyle(color: Colors.grey),
+                )
+              ],
+            )
+          ],
+        ),
+      ),
+    ),
+  );
+}
+
+class Kontak {
+  String? nom;
+  String? nomer;
+  Kontak({
+    this.nom,
+    this.nomer,
   });
 }
