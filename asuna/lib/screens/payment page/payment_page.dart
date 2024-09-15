@@ -72,16 +72,16 @@ class _PaymentPageState extends State<PaymentPage> {
         Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (context) => MobilePage())); // case0() to MobilePage
+                builder: (context) => const MobilePage())); // case0() to MobilePage
         break;
       case 1:
         Navigator.push(
             context,
             MaterialPageRoute(
                 builder: (context) =>
-                    DavlatXizmatlariPage())); // case1() to DavlatXizmatlariPage
+                    const DavlatXizmatlariPage())); // case1() to DavlatXizmatlariPage
         break;
-      // Add cases for other pages as needed
+
       default:
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(content: Text('Page not implemented yet')),
@@ -148,8 +148,9 @@ class _PaymentPageState extends State<PaymentPage> {
                             color: Color(0xFF007AFF),
                             size: 35,
                           ),
-                        ),
+                       
                       ),
+                      )
                     ],
                   ),
                 ),
@@ -165,7 +166,7 @@ class _PaymentPageState extends State<PaymentPage> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => MobilePage()));
+                                  builder: (context) => const MobilePage()));
                         },
                         child: Container(
                           height: 140,
@@ -204,7 +205,7 @@ class _PaymentPageState extends State<PaymentPage> {
                               context,
                               MaterialPageRoute(
                                   builder: (context) =>
-                                      MobilePage())); // Change this to appropriate page
+                                      const MobilePage())); // Change this to appropriate page
                         },
                         child: Container(
                           height: 140,
@@ -298,10 +299,15 @@ class _PaymentPageState extends State<PaymentPage> {
         borderRadius: BorderRadius.circular(20),
         child: InkWell(
           onTap: () => _navigateToPage(index, context),
+          // ignore: sized_box_for_whitespace
           child: Container(
             height: 80,
             width: double.infinity,
-            color: const Color.fromARGB(221, 57, 57, 57),
+// <<<<<<< HEAD
+//             color: const Color.fromARGB(221, 57, 57, 57),
+// =======
+//             color: Color.fromARGB(221, 57, 57, 57),
+// >>>>>>> payment_page_branch
             child: Padding(
               padding: const EdgeInsets.only(top: 25, left: 18),
               child: Text(
