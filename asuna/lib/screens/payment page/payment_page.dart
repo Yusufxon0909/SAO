@@ -71,25 +71,24 @@ class _PaymentPageState extends State<PaymentPage> {
     switch (index) {
       case 0:
         Navigator.push(
+<<<<<<< HEAD
+            context, MaterialPageRoute(builder: (context) => const Case0()));
+        break;
+      case 1:
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => const Case1()));
+=======
             context,
             MaterialPageRoute(
-<<<<<<<<< Temporary merge branch 1
-                builder: (context) => MobilePage())); // case0() to MobilePage
-=========
-                builder: (context) =>
-                    const MobilePage())); // case0() to MobilePage
->>>>>>>>> Temporary merge branch 2
+                builder: (context) => const MobilePage())); // case0() to MobilePage
         break;
       case 1:
         Navigator.push(
             context,
             MaterialPageRoute(
                 builder: (context) =>
-<<<<<<<<< Temporary merge branch 1
-                    DavlatXizmatlariPage())); // case1() to DavlatXizmatlariPage
-=========
                     const DavlatXizmatlariPage())); // case1() to DavlatXizmatlariPage
->>>>>>>>> Temporary merge branch 2
+>>>>>>> main
         break;
 
       default:
@@ -176,11 +175,11 @@ class _PaymentPageState extends State<PaymentPage> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-<<<<<<<<< Temporary merge branch 1
-                                  builder: (context) => MobilePage()));
-=========
+<<<<<<< HEAD
+                                  builder: (context) => const Case0()));
+=======
                                   builder: (context) => const MobilePage()));
->>>>>>>>> Temporary merge branch 2
+>>>>>>> main
                         },
                         child: Container(
                           height: 140,
@@ -219,11 +218,11 @@ class _PaymentPageState extends State<PaymentPage> {
                               context,
                               MaterialPageRoute(
                                   builder: (context) =>
-<<<<<<<<< Temporary merge branch 1
-                                      MobilePage())); // Change this to appropriate page
-=========
+<<<<<<< HEAD
+                                      const Case0())); // Change this to appropriate page
+=======
                                       const MobilePage())); // Change this to appropriate page
->>>>>>>>> Temporary merge branch 2
+>>>>>>> main
                         },
                         child: Container(
                           height: 140,
