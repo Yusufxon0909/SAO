@@ -17,13 +17,7 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
-<<<<<<<<< Temporary merge branch 1
-    // final width = MediaQuery.of(context).size.width;
-    // final height = MediaQuery.of(context).size.height;
 
-=========
-   // final width = MediaQuery.of(context).size.width;
->>>>>>>>> Temporary merge branch 2
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(

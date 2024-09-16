@@ -1,4 +1,3 @@
-import 'package:asuna/screens/payment%20page/clas/davlatxizmatlari.dart';
 import 'package:flutter/material.dart';
 //import 'package:asuna/screens/payment%20page/clas/davlatxizmatlari.dart';
 import 'package:asuna/screens/payment%20page/clas/mobile.dart';
@@ -71,13 +70,6 @@ class _PaymentPageState extends State<PaymentPage> {
     switch (index) {
       case 0:
         Navigator.push(
-<<<<<<< HEAD
-            context, MaterialPageRoute(builder: (context) => const Case0()));
-        break;
-      case 1:
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const Case1()));
-=======
             context,
             MaterialPageRoute(
                 builder: (context) => const MobilePage())); // case0() to MobilePage
@@ -88,7 +80,6 @@ class _PaymentPageState extends State<PaymentPage> {
             MaterialPageRoute(
                 builder: (context) =>
                     const DavlatXizmatlariPage())); // case1() to DavlatXizmatlariPage
->>>>>>> main
         break;
 
       default:
@@ -175,11 +166,7 @@ class _PaymentPageState extends State<PaymentPage> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-<<<<<<< HEAD
-                                  builder: (context) => const Case0()));
-=======
                                   builder: (context) => const MobilePage()));
->>>>>>> main
                         },
                         child: Container(
                           height: 140,
@@ -218,11 +205,7 @@ class _PaymentPageState extends State<PaymentPage> {
                               context,
                               MaterialPageRoute(
                                   builder: (context) =>
-<<<<<<< HEAD
-                                      const Case0())); // Change this to appropriate page
-=======
                                       const MobilePage())); // Change this to appropriate page
->>>>>>> main
                         },
                         child: Container(
                           height: 140,
