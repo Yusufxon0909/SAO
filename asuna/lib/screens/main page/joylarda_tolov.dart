@@ -28,7 +28,7 @@ class _JoylardaTolovState extends State<JoylardaTolov> {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.fromLTRB(15, 20, 17, 15),
+          padding: const EdgeInsets.fromLTRB(15, 20, 17, 10),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -83,31 +83,33 @@ class _JoylardaTolovState extends State<JoylardaTolov> {
 
   Widget placeDesign(tolov) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
       child: Container(
-        height: 50,
+        height: 60,
         decoration: BoxDecoration(
-          color: Colors.grey[700],
+          color: Colors.grey[800],
           borderRadius: BorderRadius.circular(10),
         ),
         child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Padding(
-              padding: const EdgeInsets.fromLTRB(5, 5, 10, 5),
+              padding: const EdgeInsets.fromLTRB(10, 0, 15, 0),
               child: Container(
                 height: 40,
                 width: 40,
                 decoration: BoxDecoration(
-                  color: Colors.grey[700],
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(5),
                   image: DecorationImage(
                     image: NetworkImage(tolov.image),
+                    fit: BoxFit.cover,
                   ),
                 ),
               ),
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   tolov.name,
@@ -121,12 +123,13 @@ class _JoylardaTolovState extends State<JoylardaTolov> {
                   children: [
                     Icon(
                       Icons.navigation_outlined,
-                      color: Colors.grey[700],
+                      size: 15,
+                      color: Colors.grey[500],
                     ),
                     const SizedBox(width: 5),
                     Text(
                       tolov.distance,
-                      style: TextStyle(color: Colors.grey[600], fontSize: 12),
+                      style: TextStyle(color: Colors.grey[400], fontSize: 13),
                     ),
                   ],
                 ),
@@ -139,77 +142,6 @@ class _JoylardaTolovState extends State<JoylardaTolov> {
   }
 }
 
-// class JoylardaTolov extends StatefulWidget {
-//   const JoylardaTolov({super.key});
-
-//   @override
-//   State<JoylardaTolov> createState() => _JoylardaTolovState();
-// }
-
-// class _JoylardaTolovState extends State<JoylardaTolov> {
-//   List joytolovlist = [
-//     JoyTolov(
-//       image:
-//           "https://i.pinimg.com/564x/8a/8b/15/8a8b15ff6374fe4e2457aac5460b7f12.jpg",
-//       name: "PFC Turon",
-//       distance: "838 m",
-//     ),
-//     JoyTolov(
-//       image:
-//           "https://avatars.mds.yandex.net/get-altay/13499585/2a0000018f03840b5f8c810de542d6454898/M_height",
-//       name: "OQ TEPA MASJIDI",
-//       distance: "910 m",
-//     ),
-//   ];
-//   @override
-//   Widget build(BuildContext context) {
-//     return Column(
-//       children: [
-//         Padding(
-//           padding: const EdgeInsets.fromLTRB(15, 20, 17, 15),
-//           child: Row(
-//             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//             children: [
-//               Text(
-//                 "Joylarda to'lov",
-//                 style: TextStyle(
-//                     color: Colors.grey[300],
-//                     fontWeight: FontWeight.w500,
-//                     fontSize: 15),
-//               ),
-//               GestureDetector(
-//                 onTap: () {},
-//                 child: const Row(
-//                   children: [
-//                     Text(
-//                       'Hammasi',
-//                       style: TextStyle(
-//                           color: Color(0xFF2979FF),
-//                           fontWeight: FontWeight.w500,
-//                           fontSize: 15),
-//                     ),
-//                     SizedBox(width: 3),
-//                     Icon(
-//                       Icons.arrow_forward_ios,
-//                       color: Color(0xFF2979FF),
-//                       size: 13,
-//                     ),
-//                   ],
-//                 ),
-//               ),
-//             ],
-//           ),
-//         ),
-//         ListView.builder(
-//           itemBuilder: (context, index) {
-//             joytolovlist.map((tolov) => placeDesign(tolov)).toList();
-//           },
-//         ),
-//       ],
-//     );
-//   }
-
-// }
 class AllJoylarTolov extends StatelessWidget {
   final List<JoyTolov> joytolovlist;
 
@@ -224,15 +156,15 @@ class AllJoylarTolov extends StatelessWidget {
       body: ListView.builder(
         itemCount: joytolovlist.length,
         itemBuilder: (context, index) {
-          return placeDesign(joytolovlist[index]);
+          return theDesign(joytolovlist[index]);
         },
       ),
     );
   }
 
-  Widget placeDesign(tolov) {
+  Widget theDesign(tolov) {
     return Container(
-      height: 50,
+      height: 60,
       decoration: BoxDecoration(
         color: Colors.grey[700],
         borderRadius: BorderRadius.circular(10),
@@ -240,16 +172,16 @@ class AllJoylarTolov extends StatelessWidget {
       child: Row(
         children: [
           Padding(
-            padding: const EdgeInsets.fromLTRB(5, 5, 10, 5),
+            padding: const EdgeInsets.fromLTRB(15, 5, 15, 5),
             child: Container(
-              height: 40,
-              width: 40,
+              height: 50,
+              width: 50,
               decoration: BoxDecoration(
                 color: Colors.grey[700],
                 borderRadius: BorderRadius.circular(10),
                 image: DecorationImage(
                   image: NetworkImage(tolov.image),
-                  fit: BoxFit.fill,
+                  fit: BoxFit.cover,
                 ),
               ),
             ),
